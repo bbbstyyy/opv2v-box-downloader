@@ -1,0 +1,20 @@
+{
+  "name": "opv2v-box-downloader",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "从 Box 公开分享链接（游客态）下载 OPV2V 数据集，零第三方依赖",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "crawl": "node scripts/crawl.mjs",
+    "download": "node scripts/download.mjs",
+    "verify": "node scripts/download.mjs --verify-only",
+    "speedtest": "node scripts/speedtest.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.62.1"
+  }
+}

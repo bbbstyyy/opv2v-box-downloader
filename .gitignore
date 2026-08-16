@@ -1,0 +1,24 @@
+# 依赖：playwright 只是 sniff.mjs 的可选 devDependency，生产流程零依赖
+node_modules/
+
+# 本地环境配置（含代理地址与命令历史，不应外传）
+.claude/settings.local.json
+
+# 下载产物：默认输出目录与断点续传中间文件
+/data/
+*.part
+*.part.bad
+
+# 运行日志（首行会带出本机绝对路径）
+*.log
+
+# 爬取中间态，最终产物是 manifest.json
+crawl-state.json
+
+# 系统垃圾
+.DS_Store
+
+# 内部开发笔记，内容已被 README 覆盖，不随开源仓库发布
+AGENTS.md
+
+# 注意：manifest.json 是要提交的——服务器上可直接复用，不必重新 crawl（见 README）
